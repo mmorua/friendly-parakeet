@@ -4,14 +4,15 @@
     var lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     var specials = ['!', '@', '#', '$', '%', '^', '&', '*', '-', '+']; 
-
-
+    var passwordLength = [8,128];
 
 function generatePassword() {
     // Ask user how long the password will be
-    var passwordLength = window.prompt("How long would you like the password? Please choose between 8-128 characters.") 
+    var lengthOfPassword = window.prompt("How long would you like the password? Please choose between 8-128 characters.")
     // ASKBCS  
-    if (passwordLength >= parseInt("8") || passwordLength <= parseInt("128")) {
+  
+    if (lengthOfPassword >= passwordLength[0] || lengthOfPassword <= passwordLength[1]) {
+      console.log("I'm between 8-128")
     } else {
       window.alert("Please choose a valid character length.");
       generatePassword();
