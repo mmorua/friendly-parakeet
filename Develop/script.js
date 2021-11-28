@@ -5,7 +5,6 @@
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     var specials = ['!', '@', '#', '$', '%', '^', '&', '*', '-', '+']; 
 
-    var randomUpper = upperCases[Math.floor(Math.random()*upperCases.length)]; 
 
 
 function generatePassword() {
@@ -19,6 +18,8 @@ function generatePassword() {
       writePassword();
     }
 
+    var randomUpper = upperCases[Math.floor(Math.random()*upperCases.length)]; 
+
     // Ask user if they'd like uppercase letters
     var confirmUpperCases = confirm("Would you like to use uppercase letters?")
     // Log a resulting message to the console so we know that it worked
@@ -29,38 +30,46 @@ function generatePassword() {
       console.log("You chose not to use uppercase letters.")
     }
 
+    var randomLower = lowerCases[Math.floor(Math.random()*lowerCases.length)];
+
     // Ask user if they'd like lowercase letters
     var confirmLowerCase = confirm("Would you like to use lowercase letters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmLowerCase === true) {
       console.log("You chose to use lowercase letters.")
-      console.log(lowerCases)
+      console.log(randomLower)
     } else {
       console.log("You chose not to use lowercase letters.")
     }
+
+    var randomNumbers = numbers[Math.floor(Math.random()*numbers.length)];
 
     // Ask user if they'd like numbers 
     var confirmNumbers = confirm("Would you like to use numbers?")
     // Log a resulting message to the console so we know that it worked
     if (confirmNumbers === true) {
       console.log("You chose to use numbers.")
-      console.log(numbers)
+      console.log(randomNumbers)
     } else {
       console.log("You chose not to use numbers.")
     }
+
+    var randomSpecials = specials[Math.floor(Math.random()*specials.length)];
 
     // Ask user if they'd like special characters
     var confirmSpecials = confirm("Would you like to use special characters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmSpecials === true) {
       console.log("You chose to use special characters.")
-      console.log(specials)
+      console.log(randomSpecials)
     } else {
       console.log("You chose not to use special characters.")
     }
     
     // Loop through the password length
-  
+    for (var i = 0; i < passwordLength; i++) {
+      console.log('');
+    }
   
   
   };
