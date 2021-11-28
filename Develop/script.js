@@ -1,9 +1,28 @@
 // Assignment code here
     // chars array variables
-    var upperCases = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; 
-    var lowerCases = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-    var specials = ["!", "@", "#", "$", "%", "^", "&", "*", "-", "+"]; 
+    function randomUppers() {
+    var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    return upperChars[Math.floor(Math.random() * upperChars.length)];
+    }
+    
+    function randomLowers() {
+    var lowerChars = "abcdefghijklmnopqrstuvwxyz";
+    return lowerChars[Math.floor(Math.random() * lowerChars.length)]
+    }
+    
+    function randomNumbers() {
+    var numbers = "1234567890";
+    return numbers[Math.floor(Math.random() * numbers.length)]
+    }
+
+    function randomSpecials() {
+    var specialChars = "!@#$%^&*-+"; 
+    return specialChars[Math.floor(Math.random() * specialChars.length)]
+    }
+    
+    // Create new array to hold possible chars
+ 
+
 
 function generatePassword() {
     // Ask user if they'd like to use uppercase letters
@@ -11,15 +30,20 @@ function generatePassword() {
     // Log a resulting message to the console so we know that it worked
     if (confirmUpperCases === true) {
       console.log("You chose to use uppercase letters.")
+      console.log(randomUppers())
+
+      console.log()
+      // Concat the new array with uppercase
     } else {
       console.log("You chose not to use uppercase letters.")
     }
 
     // Ask user if they'd like lowercase letters
-    var confirmLowerCase = confirm("Would you like to use uppercase letters?")
+    var confirmLowerCase = confirm("Would you like to use lowercase letters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmLowerCase === true) {
       console.log("You chose to use lowercase letters.")
+      console.log(randomLowers())
     } else {
       console.log("You chose not to use lowercase letters.")
     }
@@ -29,6 +53,8 @@ function generatePassword() {
     // Log a resulting message to the console so we know that it worked
     if (confirmNumbers === true) {
       console.log("You chose to use numbers.")
+      console.log(randomNumbers())
+
     } else {
       console.log("You chose not to use numbers.")
     }
@@ -38,6 +64,8 @@ function generatePassword() {
     // Log a resulting message to the console so we know that it worked
     if (confirmSpecials === true) {
       console.log("You chose to use special characters.")
+      console.log(randomSpecials())
+
     } else {
       console.log("You chose not to use special characters.")
     }
@@ -46,10 +74,12 @@ function generatePassword() {
     var passwordLength = window.prompt(
       "How long would you like the password? Please choose between 8-128 characters."
     )
+    if (passwordLength === randomUppers())
     // Log a resulting message to the console so we know that it worked
-    console.log("This many characters")
+ 
 
-
+    // Loop through the password length
+  
 };
 
 
