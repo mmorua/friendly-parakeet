@@ -8,14 +8,15 @@
 
 
 function generatePassword() {
-
+    var num1 = parseInt(8);
+    var num2 = parseInt(128);
+ 
     // Ask user how long the password will be
-    var passwordLength = window.prompt("How long would you like the password? Please choose between 8-128 characters.")
-    if (passwordLength >= "8" || passwordLength <= "128") {
-      console.log('')
+    var passwordLength = window.prompt("How long would you like the password? Please choose between 8-128 characters.")  
+    if (passwordLength >= num1 || passwordLength <= num2) {
     } else {
       window.alert("Please choose a valid character length.");
-      writePassword();
+      generatePassword();
     }
 
     var randomUpper = upperCases[Math.floor(Math.random()*upperCases.length)]; 
