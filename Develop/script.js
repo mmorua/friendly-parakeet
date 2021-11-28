@@ -8,12 +8,10 @@
 
 
 function generatePassword() {
-    var num1 = parseInt(8);
-    var num2 = parseInt(128);
- 
     // Ask user how long the password will be
-    var passwordLength = window.prompt("How long would you like the password? Please choose between 8-128 characters.")  
-    if (passwordLength >= num1 || passwordLength <= num2) {
+    var passwordLength = window.prompt("How long would you like the password? Please choose between 8-128 characters.") 
+    // ASKBCS  
+    if (passwordLength >= parseInt("8") || passwordLength <= parseInt("128")) {
     } else {
       window.alert("Please choose a valid character length.");
       generatePassword();
@@ -25,8 +23,7 @@ function generatePassword() {
     var confirmUpperCases = confirm("Would you like to use uppercase letters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmUpperCases === true) {
-      console.log("You chose to use uppercase letters.")
-      console.log(randomUpper)
+
     } else {
       console.log("You chose not to use uppercase letters.")
     }
@@ -37,8 +34,7 @@ function generatePassword() {
     var confirmLowerCase = confirm("Would you like to use lowercase letters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmLowerCase === true) {
-      console.log("You chose to use lowercase letters.")
-      console.log(randomLower)
+
     } else {
       console.log("You chose not to use lowercase letters.")
     }
@@ -49,8 +45,7 @@ function generatePassword() {
     var confirmNumbers = confirm("Would you like to use numbers?")
     // Log a resulting message to the console so we know that it worked
     if (confirmNumbers === true) {
-      console.log("You chose to use numbers.")
-      console.log(randomNumbers)
+
     } else {
       console.log("You chose not to use numbers.")
     }
@@ -61,19 +56,25 @@ function generatePassword() {
     var confirmSpecials = confirm("Would you like to use special characters?")
     // Log a resulting message to the console so we know that it worked
     if (confirmSpecials === true) {
-      console.log("You chose to use special characters.")
-      console.log(randomSpecials)
+
     } else {
       console.log("You chose not to use special characters.")
     }
-    
-    // Loop through the password length
-    for (var i = 0; i < passwordLength; i++) {
-      console.log('');
-    }
+
+
+    return [randomUpper, randomLower, randomNumbers, randomSpecials];
+
+};
+
+
+
+
+
+
+
   
   
-  };
+  
 
 
 
