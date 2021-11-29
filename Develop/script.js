@@ -1,7 +1,6 @@
     // Assignment code here
     // Characters array
     var masterArray = []
-    var randomCharacters = masterArray[Math.floor(Math.random()*masterArray.length)]; 
     var upperCases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     var lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -61,8 +60,11 @@
       }
     }
 
+    var randomCharacters = masterArray[Math.floor(Math.random()*masterArray.length)]; 
+    console.log(randomCharacters)
+
     // create a variable as an empty string
-    var emptyString = "";
+    var emptyPassword = "";
     // loop through the length of the password
     for (var i = 0; i < lengthOfPassword; i++) {
       console.log(lengthOfPassword)
