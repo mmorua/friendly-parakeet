@@ -1,16 +1,12 @@
     // Assignment code here
     // Characters array
+    var masterArray = []
+    var randomCharacters = masterArray[Math.floor(Math.random()*masterArray.length)]; 
     var upperCases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     var lowerCases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     var specials = ['!', '@', '#', '$', '%', '^', '&', '*', '-', '+']; 
-    var randomUpper = upperCases[Math.floor(Math.random()*upperCases.length)]; 
-    var randomLower = lowerCases[Math.floor(Math.random()*lowerCases.length)];
-    var randomNumbers = numbers[Math.floor(Math.random()*numbers.length)];
-    var randomSpecials = specials[Math.floor(Math.random()*specials.length)];
-    var returnCharacters = [randomUpper, randomLower, randomNumbers, randomSpecials];
-
-
+    
     function generatePassword() {
     // Ask user how long the password will be
     var lengthOfPassword = window.prompt("How long would you like the password? Please choose between 8-128 characters.")  
@@ -20,61 +16,61 @@
       writePassword();
     } else {
       console.log("I'm between 8-128")
-
-
       // Ask user if they'd like uppercase letters
       var confirmUpperCases = confirm("Would you like to use uppercase letters?")
       // Log a resulting message to the console so we know that it worked
       if (confirmUpperCases === true) {
         console.log("You chose to use uppercase letters.")
-        returnCharacters[0]
-        
-
+        masterArray = masterArray.concat(upperCases)
+        console.log(masterArray)
       } else {
         console.log("You chose not to use uppercase letters.")
         
       }
-
-
       // Ask user if they'd like lowercase letters
       var confirmLowerCase = confirm("Would you like to use lowercase letters?")
       // Log a resulting message to the console so we know that it worked
       if (confirmLowerCase === true) {
         console.log("You chose to use lowerrcase letters.")
-        returnCharacters[1]
+        masterArray = masterArray.concat(lowerCases)
+        console.log(masterArray)
 
       } else {
         console.log("You chose not to use lowercase letters.")
       }
-
-
       // Ask user if they'd like numbers 
       var confirmNumbers = confirm("Would you like to use numbers?")
       // Log a resulting message to the console so we know that it worked
       if (confirmNumbers === true) {
         console.log("You chose to use numbers.")
-        returnCharacters[2]
-
+        masterArray = masterArray.concat(numbers)
+        console.log(masterArray)
       } else {
         console.log("You chose not to use numbers.")
       }
-
-
       // Ask user if they'd like special characters
       var confirmSpecials = confirm("Would you like to use special characters?")
       // Log a resulting message to the console so we know that it worked
       if (confirmSpecials === true) {
         console.log("You chose to use special characters.")
-        returnCharacters[3]
+        masterArray = masterArray.concat(specials)
+        console.log(masterArray)
 
       } else {
         console.log("You chose not to use special characters.")
       }
     }
 
+    // create a variable as an empty string
+    var emptyString = "";
+    // loop through the length of the password
+    for (var i = 0; i < lengthOfPassword; i++) {
+      console.log(lengthOfPassword)
+    // inside the loop get a random character 
 
-
-
+    // concat random character with the empty string variable
+    
+    }
 };
 
 
